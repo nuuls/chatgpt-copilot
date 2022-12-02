@@ -4,9 +4,11 @@ Build a very simple Github copilot-like app using ChatGPT as the backend,
 	but only use ChatGPT to write the code without typing anything myself
 
 We need:
-	- Extract instructions and relevant code from codebase
+	- DONE: Extract instructions and relevant code from codebase
 		- Comment with prefix for now and scan the files every X seconds?
 			//gpt write function that does xxxx
+
+
 	- A way to send instructions and code to ChatGPT
 		- Rest API POST call ( https://chat.openai.com/backend-api/conversation )
 	- A way to get the results
