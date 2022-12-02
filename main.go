@@ -97,6 +97,29 @@ type Content struct {
 	Parts       []string `json:"parts"`
 }
 
+func newPayload(parts string) *Payload {
+	// Create a new Payload
+	p := &Payload{
+		Action: "next",
+		Messages: []Message{
+			{
+				ID:   "7a571da6-a5d8-4724-b7fc-430565618c9e",
+				Role: "user",
+				Content: &Content{
+					ContentType: "text",
+					Parts: []string{
+						parts,
+					},
+				},
+			},
+		},
+		ParentMessageID: "a4a85e2c-61ee-4907-9a83-ed1155e784de",
+		Model:           "text-davinci-002-render",
+	}
+
+	return p
+}
+
 func callAPI() {
 	// Define the payload
 	payload := Payload{
